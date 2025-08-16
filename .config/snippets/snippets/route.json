@@ -1,0 +1,16 @@
+{
+  "Feature Route": {
+    "scope": "typescript",
+    "prefix": "ngfr",
+    "body": [
+      "import { Routes } from  '@angular/router';",
+      "export const ${1:ROUTES}:Routes = [",
+      "\t{",
+      "\t\tpath: '',",
+      "\t\tcomponent: ${2},",
+      "\t\tchildren: []",
+      "\t}",
+      "]"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "my-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "ts",
+          "typescript"
+        ],
+        "path": "./snippets/comp.json"
+      },
+      {
+        "language": [
+          "ts",
+          "typescript"
+        ],
+        "path": "./snippets/rcomp.json"
+      },
+      {
+        "language": [
+          "ts",
+          "typescript"
+        ],
+        "path": "./snippets/route.json"
+      }
+    ]
+  }
+}

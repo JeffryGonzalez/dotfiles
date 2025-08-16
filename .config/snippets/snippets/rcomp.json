@@ -1,0 +1,23 @@
+{
+  "Angular Refactor Component": {
+    "scope": "typescript",
+    "prefix": "ngrc",
+    "body": [
+      "import { Component, ChangeDetectionStrategy } from '@angular/core';",
+      "",
+      "@Component({",
+      "\tselector: 'app-$1',",
+      "\tchangeDetection: ChangeDetectionStrategy.OnPush,",
+      "\timports: [],",
+      "\ttemplate: `",
+      "\t\t$CLIPBOARD",
+      "\t`,",
+      "\tstyles: ``",
+      "})",
+      "export class ${2:${TM_FILENAME_BASE/(?:^|-|_|\\.)(\\w)/${1:/pascalcase}/g}} {",
+      "$0",
+      "}"
+    ],
+    "description": "Angular Standalone Component"
+  }
+}
