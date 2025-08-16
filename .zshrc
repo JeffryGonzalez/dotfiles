@@ -105,14 +105,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="/opt/homebrew/bin/nvim"
 
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
 
 # AsyncAPI CLI Autocomplete
 
-ASYNCAPI_AC_ZSH_SETUP_PATH=/Users/jeffrygonzalez/Library/Caches/@asyncapi/cli/autocomplete/zsh_setup && test -f $ASYNCAPI_AC_ZSH_SETUP_PATH && source $ASYNCAPI_AC_ZSH_SETUP_PATH; # asyncapi autocomplete setup
 
 
-export PATH="/Users/jeffrygonzalez/breakpoints/scripts:$PATH"
-eval "$(zoxide init zsh)"
-alias cd="z"
