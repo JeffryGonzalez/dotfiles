@@ -110,3 +110,10 @@ export EDITOR="/opt/homebrew/bin/nvim"
 
 
 
+
+# bun completions
+[ -s "/Users/jeffrygonzalez/.bun/_bun" ] && source "/Users/jeffrygonzalez/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
