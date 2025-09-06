@@ -13,7 +13,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -48,6 +47,21 @@ require("lazy").setup({
         "tutor",
         "zipPlugin",
       },
+    },
+  },
+})
+
+vim.lsp.config("roslyn", {
+  on_attach = function()
+    print("This will run when the server attaches!")
+  end,
+  settings = {
+    ["csharp|inlay_hints"] = {
+      csharp_enable_inlay_hints_for_implicit_object_creation = true,
+      csharp_enable_inlay_hints_for_implicit_variable_types = true,
+    },
+    ["csharp|code_lens"] = {
+      dotnet_enable_references_code_lens = true,
     },
   },
 })

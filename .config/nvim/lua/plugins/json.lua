@@ -1,15 +1,15 @@
 return {
-  "nvim-telescope/telescope.nvim",
+  "Owen-Dechow/videre.nvim",
+  cmd = "Videre",
   dependencies = {
-    "https://git.myzel394.app/Myzel394/jsonfly.nvim",
+    "Owen-Dechow/graph_view_yaml_parser", -- Optional: add YAML support
+    "Owen-Dechow/graph_view_toml_parser", -- Optional: add TOML support
+    "a-usr/xml2lua.nvim", -- Optional | Experimental: add XML support
   },
-  keys = {
-    {
-      "<leader>j",
-      "<cmd>Telescope jsonfly<cr>",
-      desc = "Open json(fly)",
-      ft = { "json", "xml", "yaml" },
-      mode = "n",
-    },
+  opts = {
+    round_units = false,
+    simple_statusline = true, -- If you are just starting out with Videre,
+    --   setting this to `false` will give you
+    --   descriptions of available keymaps.
   },
 }
