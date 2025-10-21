@@ -120,3 +120,14 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Added by get-aspire-cli.sh
 export PATH="$HOME/.aspire/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/jeffrygonzalez/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+# zsh vim mode
+# hhttps://github.com/jeffreytse/zsh-vi-mode
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
