@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
+alias t="todo.sh -d $HOME/.local/bin/todo.cfg"
+source $HOME/todo_completion
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -131,3 +134,5 @@ esac
 # zsh vim mode
 # hhttps://github.com/jeffreytse/zsh-vi-mode
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+eval "$(/Users/jeffrygonzalez/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
