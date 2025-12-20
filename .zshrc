@@ -136,3 +136,16 @@ esac
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 eval "$(/Users/jeffrygonzalez/.local/bin/mise activate zsh)"
 eval "$(mise activate zsh)"
+
+prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+    print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+    print -n "%{%k%}"
+  fi
+  print -n "%{%f%}"
+  CURRENT_BG=''
+  # Adds the new line and ➜ as the start character.
+  printf "\n ➜";
+}
+
