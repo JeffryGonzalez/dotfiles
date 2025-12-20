@@ -146,3 +146,4 @@ prompt_end() {
   printf "\n ➜";
 }
 
+bindkey -v 
