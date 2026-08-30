@@ -29,6 +29,13 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
+  -- Load my own plugins from ~/Projects when they're checked out there,
+  -- otherwise clone them from GitHub. Same config on every machine.
+  dev = {
+    path = "~/Projects",
+    patterns = { "JeffryGonzalez" },
+    fallback = true,
+  },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
     enabled = true, -- check for plugin updates periodically

@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/jeffrygonzalez/.zsh/completions:"* ]]; then export FPATH="/Users/jeffrygonzalez/.zsh/completions:$FPATH"; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
@@ -105,8 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR="/opt/homebrew/bin/nvim"
 
-
-
+export KUBECONFIG=/Users/jeffrygonzalez/.kube/config
+export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 # AsyncAPI CLI Autocomplete
 
 
@@ -147,3 +149,14 @@ prompt_end() {
 }
 
 bindkey -v 
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
+eval "$(zoxide init zsh)"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+. "/Users/jeffrygonzalez/.deno/env"
+
+# nub
+export PATH="$HOME/.nub/bin:$PATH"
